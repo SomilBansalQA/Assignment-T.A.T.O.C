@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="4" passed="4">
+  <reporter-output>
+    <line>
+      <![CDATA[Successfully Launched Tatoc Page]]>
+    </line>
+    <line>
+      <![CDATA[User click on advance link]]>
+    </line>
+    <line>
+      <![CDATA[User click on Next from menu2]]>
+    </line>
+    <line>
+      <![CDATA[User click on Next from menu2]]>
+    </line>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="9118" started-at="2017-07-26T09:25:28Z" finished-at="2017-07-26T09:25:38Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="9118" started-at="2017-07-26T09:25:28Z" finished-at="2017-07-26T09:25:38Z">
+      <class name="org.qait.tatoc.test.tatoc1.TatocAdvanceTest">
+        <test-method status="PASS" signature="setup()[pri:0, instance:org.qait.tatoc.test.tatoc1.TatocAdvanceTest@7c16905e]" name="setup" is-config="true" duration-ms="9" started-at="2017-07-26T14:55:28Z" finished-at="2017-07-26T14:55:28Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="testLaunchApplication()[pri:0, instance:org.qait.tatoc.test.tatoc1.TatocAdvanceTest@7c16905e]" name="testLaunchApplication" duration-ms="6006" started-at="2017-07-26T14:55:28Z" finished-at="2017-07-26T14:55:34Z">
+          <reporter-output>
+            <line>
+              <![CDATA[Successfully Launched Tatoc Page]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- testLaunchApplication -->
+        <test-method status="PASS" signature="testClickOnAdvanceCourse()[pri:1, instance:org.qait.tatoc.test.tatoc1.TatocAdvanceTest@7c16905e]" name="testClickOnAdvanceCourse" duration-ms="421" started-at="2017-07-26T14:55:34Z" finished-at="2017-07-26T14:55:35Z">
+          <reporter-output>
+            <line>
+              <![CDATA[User click on advance link]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- testClickOnAdvanceCourse -->
+        <test-method status="PASS" signature="testClickOnNexrFromMenu2()[pri:2, instance:org.qait.tatoc.test.tatoc1.TatocAdvanceTest@7c16905e]" name="testClickOnNexrFromMenu2" duration-ms="163" started-at="2017-07-26T14:55:35Z" finished-at="2017-07-26T14:55:35Z">
+          <reporter-output>
+            <line>
+              <![CDATA[User click on Next from menu2]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- testClickOnNexrFromMenu2 -->
+        <test-method status="PASS" signature="testSubmitValidcredentials()[pri:3, instance:org.qait.tatoc.test.tatoc1.TatocAdvanceTest@7c16905e]" name="testSubmitValidcredentials" duration-ms="2497" started-at="2017-07-26T14:55:35Z" finished-at="2017-07-26T14:55:38Z">
+          <reporter-output>
+            <line>
+              <![CDATA[User click on Next from menu2]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- testSubmitValidcredentials -->
+      </class> <!-- org.qait.tatoc.test.tatoc1.TatocAdvanceTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

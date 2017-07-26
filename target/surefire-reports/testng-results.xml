@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="11" passed="11">
+  <reporter-output>
+    <line>
+      <![CDATA[Successfully Launched Tatoc Page]]>
+    </line>
+    <line>
+      <![CDATA[Successfully Launched Tatoc Page]]>
+    </line>
+    <line>
+      <![CDATA[User click on advance link]]>
+    </line>
+    <line>
+      <![CDATA[User click on basic link]]>
+    </line>
+    <line>
+      <![CDATA[User click on Next from menu2]]>
+    </line>
+    <line>
+      <![CDATA[User click on greenBox]]>
+    </line>
+    <line>
+      <![CDATA[User click on Next from menu2]]>
+    </line>
+  </reporter-output>
+  <suite name="Command line suite" duration-ms="118018" started-at="2017-07-26T09:34:20Z" finished-at="2017-07-26T09:36:18Z">
+    <groups>
+    </groups>
+    <test name="Command line test" duration-ms="118018" started-at="2017-07-26T09:34:20Z" finished-at="2017-07-26T09:36:18Z">
+      <class name="org.qait.tatoc.test.tatoc1.TatocAdvanceTest">
+        <test-method status="PASS" signature="setup()[pri:0, instance:org.qait.tatoc.test.tatoc1.TatocAdvanceTest@57829d67]" name="setup" is-config="true" duration-ms="11" started-at="2017-07-26T15:04:20Z" finished-at="2017-07-26T15:04:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:org.qait.tatoc.test.tatoc1.TatocBasicTest@19dfb72a]" name="setup" is-config="true" duration-ms="0" started-at="2017-07-26T15:04:20Z" finished-at="2017-07-26T15:04:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="testLaunchApplication()[pri:0, instance:org.qait.tatoc.test.tatoc1.TatocAdvanceTest@57829d67]" name="testLaunchApplication" duration-ms="6160" started-at="2017-07-26T15:04:20Z" finished-at="2017-07-26T15:04:26Z">
+          <reporter-output>
+            <line>
+              <![CDATA[Successfully Launched Tatoc Page]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- testLaunchApplication -->
+        <test-method status="PASS" signature="testClickOnAdvanceCourse()[pri:1, instance:org.qait.tatoc.test.tatoc1.TatocAdvanceTest@57829d67]" name="testClickOnAdvanceCourse" duration-ms="488" started-at="2017-07-26T15:04:31Z" finished-at="2017-07-26T15:04:32Z">
+          <reporter-output>
+            <line>
+              <![CDATA[User click on advance link]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- testClickOnAdvanceCourse -->
+        <test-method status="PASS" signature="testClickOnNexrFromMenu2()[pri:2, instance:org.qait.tatoc.test.tatoc1.TatocAdvanceTest@57829d67]" name="testClickOnNexrFromMenu2" duration-ms="175" started-at="2017-07-26T15:04:32Z" finished-at="2017-07-26T15:04:33Z">
+          <reporter-output>
+            <line>
+              <![CDATA[User click on Next from menu2]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- testClickOnNexrFromMenu2 -->
+        <test-method status="PASS" signature="testSubmitValidcredentials()[pri:3, instance:org.qait.tatoc.test.tatoc1.TatocAdvanceTest@57829d67]" name="testSubmitValidcredentials" duration-ms="2505" started-at="2017-07-26T15:04:33Z" finished-at="2017-07-26T15:04:36Z">
+          <reporter-output>
+            <line>
+              <![CDATA[User click on Next from menu2]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- testSubmitValidcredentials -->
+      </class> <!-- org.qait.tatoc.test.tatoc1.TatocAdvanceTest -->
+      <class name="org.qait.tatoc.test.tatoc1.TatocBasicTest">
+        <test-method status="PASS" signature="testLaunchApplication()[pri:0, instance:org.qait.tatoc.test.tatoc1.TatocBasicTest@19dfb72a]" name="testLaunchApplication" duration-ms="5510" started-at="2017-07-26T15:04:26Z" finished-at="2017-07-26T15:04:31Z">
+          <reporter-output>
+            <line>
+              <![CDATA[Successfully Launched Tatoc Page]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- testLaunchApplication -->
+        <test-method status="PASS" signature="testClickOnBasicCourse()[pri:1, instance:org.qait.tatoc.test.tatoc1.TatocBasicTest@19dfb72a]" name="testClickOnBasicCourse" duration-ms="379" started-at="2017-07-26T15:04:32Z" finished-at="2017-07-26T15:04:32Z">
+          <reporter-output>
+            <line>
+              <![CDATA[User click on basic link]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- testClickOnBasicCourse -->
+        <test-method status="PASS" signature="testClickOnGreenBox()[pri:2, instance:org.qait.tatoc.test.tatoc1.TatocBasicTest@19dfb72a]" name="testClickOnGreenBox" duration-ms="587" started-at="2017-07-26T15:04:33Z" finished-at="2017-07-26T15:04:33Z">
+          <reporter-output>
+            <line>
+              <![CDATA[User click on greenBox]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- testClickOnGreenBox -->
+        <test-method status="PASS" signature="testclickOnProceedWhenColorOfBothBoxAreSame()[pri:3, instance:org.qait.tatoc.test.tatoc1.TatocBasicTest@19dfb72a]" name="testclickOnProceedWhenColorOfBothBoxAreSame" duration-ms="100830" started-at="2017-07-26T15:04:36Z" finished-at="2017-07-26T15:06:16Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testclickOnProceedWhenColorOfBothBoxAreSame -->
+        <test-method status="PASS" signature="testclickOnProceedWhenDragMeBoxIsInCellLabeledDropBox()[pri:4, instance:org.qait.tatoc.test.tatoc1.TatocBasicTest@19dfb72a]" name="testclickOnProceedWhenDragMeBoxIsInCellLabeledDropBox" duration-ms="266" started-at="2017-07-26T15:06:16Z" finished-at="2017-07-26T15:06:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testclickOnProceedWhenDragMeBoxIsInCellLabeledDropBox -->
+        <test-method status="PASS" signature="testclickOnProceedWhenPopUpWindowFormWasSubmittedProperly()[pri:5, instance:org.qait.tatoc.test.tatoc1.TatocBasicTest@19dfb72a]" name="testclickOnProceedWhenPopUpWindowFormWasSubmittedProperly" duration-ms="767" started-at="2017-07-26T15:06:17Z" finished-at="2017-07-26T15:06:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testclickOnProceedWhenPopUpWindowFormWasSubmittedProperly -->
+        <test-method status="PASS" signature="testclickOnProceedWhenTokenCookieIsSetProperlyAndTokenIsValid()[pri:6, instance:org.qait.tatoc.test.tatoc1.TatocBasicTest@19dfb72a]" name="testclickOnProceedWhenTokenCookieIsSetProperlyAndTokenIsValid" duration-ms="313" started-at="2017-07-26T15:06:17Z" finished-at="2017-07-26T15:06:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testclickOnProceedWhenTokenCookieIsSetProperlyAndTokenIsValid -->
+      </class> <!-- org.qait.tatoc.test.tatoc1.TatocBasicTest -->
+    </test> <!-- Command line test -->
+  </suite> <!-- Command line suite -->
+</testng-results>
