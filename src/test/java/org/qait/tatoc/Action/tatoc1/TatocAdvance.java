@@ -1,58 +1,69 @@
-package org.qait.tatoc.Action.tatoc1;
+package org.qait.tatoc.test.tatoc1;
 
-import static com.jayway.restassured.RestAssured.given;
 import static org.testng.Assert.assertEquals;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
+import org.qait.tatoc.Action.tatoc1.Driver;
+import org.qait.tatoc.Action.tatoc1.TatocAdvance;
+import org.qait.tatoc.Action.tatoc1.TatocAdvanceRestAPI;
+import org.testng.Reporter;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
 
-import com.jayway.restassured.http.ContentType;
+public class TatocAdvanceTest {
 
-public class TatocAdvance {
-
+	Driver driverObj;
+	TatocAdvance advanceObj;
+	TatocAdvanceRestAPI tatocRestObj;
 	WebDriver driver;
-	Tatocdatabase tatocdatabaseobj;
+	String endOfCourse = "Obstacle Course is Complete!";
 
-	By advanceCourse = By.linkText("Advanced Course");
-	By menu2 = By.className("m2");
-	By goNext = By.cssSelector(".menuitem:nth-child(5)");
-	By symbolDisplay= By.id("symboldisplay");
-	By name=By.id("name");
-	By passkey=By.id("passkey");
-	By proceed=By.id("submit");
+	@BeforeTest
+	void setup() {
+		driverObj = new Driver();
 
-	public TatocAdvance(WebDriver driver) {
-		this.driver = driver;
-		tatocdatabaseobj =new Tatocdatabase();
 	}
 
-	public void clickOnAdvanceCourse() {
-		driver.findElement(advanceCourse).click();
+	@Test(priority = 0)
+	void testLaunchApplication() {
+		driver = driverObj.LaunchApplication();
+		advanceObj = new TatocAdvance(driver);
+		tatocRestObj=new TatocAdvanceRestAPI(driver);
+		Reporter.log("Successfully Launched Tatoc Page");
 	}
 
-	public void clickOnNexrFromMenu2() {
-		WebElement element = driver.findElement(menu2);
 
-		Actions action = new Actions(driver);
-		action.moveToElement(element).build().perform();
-		driver.findElement(goNext).click();
-	}
-
-	public void clickOnProceed(){
-		driver.findElement(proceed).click();
+	@Test(priority = 1)
+	void testClickOnAdvanceCourse(){
+		advanceObj.clickOnAdvanceCourse();
+		Reporter.log("User click on advance link");
 	}
 	
-	public void submitValidcredentials(){
-		String Symbol=driver.findElement(symbolDisplay).getText();
-		String userNameAndPassword=tatocdatabaseobj.getUserNameAndPasswordFromCredential(Symbol);
-		System.out.println(userNameAndPassword);
-		String[] words=userNameAndPassword.split("\\s");
-		driver.findElement(name).sendKeys(words[0]);
-		driver.findElement(passkey).sendKeys(words[1]);
-		clickOnProceed();
+	@Test(priority = 2)
+	void testClickOnNexrFromMenu2(){
+		advanceObj.clickOnNexrFromMenu2();
+		Reporter.log("User click on Next from menu2");
+	}
+	@Test(priority = 3)
+	void testSubmitValidcredentials(){
+		advanceObj.submitValidcredentials();
+		Reporter.log("User click on Next from menu2");
 	}
 	
+	@Test(priority=4)
+	public void testRegisterforAccess(){
+		tatocRestObj.RegisterforAccess();
+	}
 	
+	@Test(priority=5)
+	public void testClickOnDownload(){
+		tatocRestObj.clickOnDownload();
+	}
+	@Test(priority=6)
+	public void testreadingFile(){
+		tatocRestObj.readingFile();
+		tatocRestObj.setSignatureValue();
+		tatocRestObj.clickonSubmitButton();
+		assertEquals(endOfCourse,tatocRestObj.getEndOfBasicCourseText());
+	}
 }
