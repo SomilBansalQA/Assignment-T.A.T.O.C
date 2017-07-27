@@ -43,6 +43,7 @@ public class Driver {
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
 		driver.get("http://10.0.1.86/tatoc");
+		
 		return driver;
 	}
 }
