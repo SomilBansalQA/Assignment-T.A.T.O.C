@@ -29,7 +29,7 @@ public class TatocBasicTest {
 	}
 
 	@Test(priority = 1)
-	void testClickOnBasicCourse(){
+	void testClickOnBasicCourse() {
 		basicObj.clickOnBasicCourse();
 		Reporter.log("User click on basic link");
 	}
@@ -43,21 +43,26 @@ public class TatocBasicTest {
 	@Test(priority = 3)
 	void testclickOnProceedWhenColorOfBothBoxAreSame() {
 		basicObj.clickOnProceedWhenColorOfBothBoxAreSame();
+		Reporter.log("Successfully done, color of both boxes are same ");
 	}
 
 	@Test(priority = 4)
 	void testclickOnProceedWhenDragMeBoxIsInCellLabeledDropBox() {
 		basicObj.clickOnProceedWhenDragMeBoxIsInCellLabeledDropBox();
+        Reporter.log("Successfully done the test, DRAG ME box is in the cell labeled DROPBOX");
 	}
 
 	@Test(priority = 5)
 	void testclickOnProceedWhenPopUpWindowFormWasSubmittedProperly() {
 		basicObj.clickOnProceedWhenPopUpWindowFormWasSubmittedProperly();
+		Reporter.log("The popup window form was submitted Suceessfully");
 	}
 
 	@Test(priority = 6)
 	void testclickOnProceedWhenTokenCookieIsSetProperlyAndTokenIsValid() {
 		basicObj.clickOnProceedWhenTokenCookieIsSetProperlyAndTokenIsValid();
 		assertEquals(endOfCourse, basicObj.getEndOfBasicCourseText());
+		Reporter.log("cookie is set properly");
+		Reporter.log("Successfully finish T.A.T.O.C Basic Course");
 	}
 }
