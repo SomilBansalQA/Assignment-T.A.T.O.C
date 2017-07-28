@@ -39,7 +39,7 @@ public class TatocAdvanceTest {
 	}
 
 	@Test(priority = 2)
-	void testClickOnNexrFromMenu2() {
+	void testClickOnNextFromMenu2() {
 		advanceObj.clickOnNexrFromMenu2();
 		Reporter.log("User click on Next from menu2");
 	}
@@ -47,17 +47,20 @@ public class TatocAdvanceTest {
 	@Test(priority = 3)
 	void testSubmitValidcredentials() {
 		advanceObj.submitValidcredentials();
-		Reporter.log("User click on Next from menu2");
+		Reporter.log("User submit the valid Credentials");
 	}
 
 	@Test(priority = 4)
 	public void testRegisterforAccess() {
 		tatocRestObj.RegisterforAccess();
+		Reporter.log("User successfully use Rest Service to register for access");
+	
 	}
 
 	@Test(priority = 5)
 	public void testClickOnDownload() {
 		tatocRestObj.clickOnDownload();
+		Reporter.log("User click on Download link");
 	}
 
 	@Test(priority = 6)
@@ -66,5 +69,6 @@ public class TatocAdvanceTest {
 		tatocRestObj.setSignatureValue();
 		tatocRestObj.clickonSubmitButton();
 		assertEquals(endOfCourse, tatocRestObj.getEndOfBasicCourseText());
+		Reporter.log("Successfully finish T.A.T.O.C Advance Course");
 	}
 }
