@@ -40,7 +40,7 @@ public class TatocAdvanceTest {
 
 	@Test(priority = 2)
 	void testClickOnNextFromMenu2() {
-		advanceObj.clickOnNexrFromMenu2();
+		advanceObj.clickOnNextFromMenu2();
 		Reporter.log("User click on Next from menu2");
 	}
 
