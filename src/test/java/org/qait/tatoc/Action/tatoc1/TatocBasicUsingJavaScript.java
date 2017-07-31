@@ -14,9 +14,6 @@ public class TatocBasicUsingJavaScript {
 
 
 
-	By launchWindow = By.linkText("Launch Popup Window");
-	By name = By.id("name");
-	By submit = By.id("submit");
 	By generateToken = By.linkText("Generate Token");
 	By token = By.id("token");
 	By endOfBasicCourse = By.cssSelector("Span[class='finish']");
@@ -88,7 +85,7 @@ public class TatocBasicUsingJavaScript {
 		((JavascriptExecutor) driver).executeScript("document.getElementsByTagName('a')[0].click();");	}
 
 	public void clickOnLaunchWindow() {
-		driver.findElement(launchWindow).click();
+	        ((JavascriptExecutor) driver).executeScript("document.querySelector('.page>a').click();");
 	}
 
 	public void clickOnProceedWhenPopUpWindowFormWasSubmittedProperly()
@@ -99,9 +96,9 @@ public class TatocBasicUsingJavaScript {
 		for (String childHandle : driver.getWindowHandles()) {
 			driver.switchTo().window(childHandle);
 		}
-		driver.findElement(name).sendKeys("Somil Bansal");
-		driver.findElement(submit).click();
-		driver.switchTo().window(parentHandle);
+		((JavascriptExecutor) driver).executeScript("return document.getElementById('name').setAttribute('value','somil Bansal');");
+		((JavascriptExecutor) driver).executeScript("document.getElementById('submit').click();");
+                driver.switchTo().window(parentHandle);
 		clickOnProceed();
 	}
 
