@@ -81,12 +81,11 @@ public class TatocBasicUsingJavaScript {
 	public void clickOnProceedWhenDragMeBoxIsInCellLabeledDropBox() {
 		WebElement From = (WebElement) ((JavascriptExecutor) driver).executeScript("return document.getElementById('dragbox')");
 		
-		WebElement To =  (WebElement) ((JavascriptExecutor) driver).executeScript("return document.getElementById('dragbox')");
+		WebElement To =  (WebElement) ((JavascriptExecutor) driver).executeScript("return document.getElementById('dropbox')");
 		Actions builder = new Actions(driver);
 		Action dragAndDrop = builder.clickAndHold(From).moveToElement(To).release(To).build();
 		dragAndDrop.perform();
-		clickOnProceed();
-	}
+		((JavascriptExecutor) driver).executeScript("document.getElementsByTagName('a')[0].click();");	}
 
 	public void clickOnLaunchWindow() {
 		driver.findElement(launchWindow).click();
