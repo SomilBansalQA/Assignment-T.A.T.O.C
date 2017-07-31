@@ -12,12 +12,6 @@ import org.openqa.selenium.interactions.Actions;
 
 public class TatocBasicUsingJavaScript {
 
-
-
-	By generateToken = By.linkText("Generate Token");
-	By token = By.id("token");
-	By endOfBasicCourse = By.cssSelector("Span[class='finish']");
-
 	WebDriver driver;
 
 	public TatocBasicUsingJavaScript(WebDriver driver) {
@@ -103,11 +97,14 @@ public class TatocBasicUsingJavaScript {
 	}
 
 	public void clickOnGenerateToken() {
-		driver.findElement(generateToken).click();
+		((JavascriptExecutor) driver)
+		.executeScript("document.querySelector('.page>a').click();");
+
 	}
 
 	public String getToken() {
-		String tokenValue = driver.findElement(token).getText();
+		String tokenValue = (String)((JavascriptExecutor) driver).executeScript("return document.getElementById('token').innerHTML");
+	
 		return tokenValue;
 	}
 
@@ -122,10 +119,12 @@ public class TatocBasicUsingJavaScript {
 		for (Cookie getcookies : cookiesList) {
 			System.out.println(getcookies);
 		}
-		clickOnProceed();
+		((JavascriptExecutor) driver)
+		.executeScript("document.querySelector('.page>a:nth-of-type(2)').click();");
+
 	}
 
 	public String getEndOfBasicCourseText() {
-		return driver.findElement(endOfBasicCourse).getText();
+          return (String)((JavascriptExecutor) driver).executeScript("return document.querySelector('span.finish').innerHTML");
 	}
 }
